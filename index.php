@@ -46,6 +46,17 @@
         a:hover {
             color: red;
         }
+        .comentario {
+            margin-top: 15px;
+            width: 90%;
+        }
+        .comentario>b {
+            margin-left: 30px;
+        }
+        .comentario>p {
+            padding-left: 10%;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body style="margin-left:15%;width:70%;">
@@ -80,12 +91,15 @@
 
         <p><?php
             foreach($comentarios as $c){
-                echo '<b>'.$c['nome'].'</b> - '.date('d/m/Y H:i:s', strtotime($c['criacao'])).'<br>'.$c['comment'].'<hr>';
+                echo '<div class="comentario"><img align="left" src='.$c['foto'].' width="65px" />'.
+                     '<b>'.$c['nome'].'</b> - <i>'.
+                     date('d/m/Y H:i:s', strtotime($c['criacao'])).'</i><p>'.
+                     $c['comment'].'</p></div><hr>';
             }
         ?></p>
     </div>
     <div>
-        <p style="margin-top:30px;">Deixe seu comentário:</p>
+        <p style="margin-top:30px;">Deixe seu comentário: <span style="color:#999;">(Máx: 400 carácteres)</span></p>
         <form class="comentar" method="post" action="">
             <textarea name="comentario" rows="4" cols="80"></textarea>
             <input type="submit" name="enviar" value="Enviar" /> 

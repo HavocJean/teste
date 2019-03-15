@@ -40,7 +40,7 @@ include_once 'class/ClassCadastrar.php';
     </style>
 </head>
 <body style="margin-left:15%;width:70%;">
-    <p>Cadastrar:</p>
+    <h3>Cadastrar:</h3>
     <form action="" method="post" enctype="multipart/form-data" class="cadastrar">
         <label id="nome" >Nome:</label><input type="text" name="nome" id="nome"/><br>
         <label id="email" >Email:</label><input type="email" name="email" id="email"/><br>

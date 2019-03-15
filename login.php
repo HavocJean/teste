@@ -25,6 +25,12 @@ include_once 'class/ClassCadastrar.php';
             text-decoration: none;
             color: #000;
         }
+        .cadastro {
+            color: blue;
+        }
+        .cadastro:hover {
+            color: red;
+        }
     </style>
 </head>
 <body style="margin-left:15%;width:70%;">
@@ -35,6 +41,9 @@ include_once 'class/ClassCadastrar.php';
         <input type="submit" name="entrar" value="Entrar" />
         <button style="margin-left:10px"><a href="index.php">Voltar</a></button> 
     </form>
+    <div>
+        <p>Não é cadastrado? cadastre-se <a href="cadastrar.php" class="cadastro">aqui</a>.</p>
+    </div>
     
 </body>
 </html>
